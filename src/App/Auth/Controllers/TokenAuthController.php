@@ -5,9 +5,9 @@ namespace Resto2web\Admin\App\Auth\Controllers;
 
 use Http;
 use Illuminate\Foundation\Auth\User;
-use Resto2web\Admin\App\Common\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;
+use Resto2web\Core\Common\Controllers\Controller;
 
 class TokenAuthController extends Controller
 {

@@ -7,7 +7,6 @@ Route::group(['middleware'=> 'web'],function() {
     Route::get('/sso/{sso_token}', [TokenAuthController::class, 'login'])->name('loginWithToken');
 });
 Route::group(['as'=> 'admin.','prefix' => 'admin','middleware'=> 'web'],function(){
-
     Route::get('/login', [AdminAuthController::class,'login'])->name('login');
     Route::middleware('admin')->group(function (){
         Route::get('/', HomePageController::class)->name('index');

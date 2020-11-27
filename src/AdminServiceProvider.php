@@ -5,6 +5,8 @@ namespace Resto2web\Admin;
 use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
 use Resto2web\Admin\App\Admin\Middleware\AdminMiddleware;
+use Resto2web\Admin\Console\Commands\PublishAdminAssets;
+use Yoeunes\Notify\NotifyServiceProvider;
 
 class AdminServiceProvider extends ServiceProvider
 {
@@ -44,7 +46,9 @@ class AdminServiceProvider extends ServiceProvider
             ], 'lang');*/
 
             // Registering package commands.
-            // $this->commands([]);
+             $this->commands([
+                 PublishAdminAssets::class
+             ]);
         }
     }
 

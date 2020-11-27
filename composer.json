@@ -17,7 +17,9 @@
     ],
     "require": {
         "php": "^7.4",
-        "illuminate/support": "^8.0"
+        "illuminate/support": "^8.0",
+        "resto2web/core": "dev-develop",
+        "yoeunes/notify": "^1.0"
     },
     "require-dev": {
         "orchestra/canvas": "^6.0",
@@ -37,7 +39,6 @@
     "scripts": {
         "test": "vendor/bin/phpunit",
         "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
-
     },
     "config": {
         "sort-packages": true
@@ -51,5 +52,11 @@
                 "Admin": "Resto2web\\Admin\\AdminFacade"
             }
         }
-    }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../core"
+        }
+    ]
 }

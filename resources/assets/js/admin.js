@@ -96,3 +96,5 @@ $(document).ready(function () {
         toastr[param['type']](param['message'],param['title'])
     });
 })
+
+const Sortable = window.Sortable = require('sortablejs/dist/sortable.umd');

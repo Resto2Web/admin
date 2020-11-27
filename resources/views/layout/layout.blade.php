@@ -35,7 +35,7 @@
 <script src="https://kit.fontawesome.com/5573a6d434.js" crossorigin="anonymous"></script>
 
 @livewireScripts
-@toastr_render
+@notify_render
 @stack('scripts')
 
 </body>

@@ -3,10 +3,10 @@
 
 namespace Resto2web\Admin\App\Auth\Controllers;
 
-use Resto2web\Admin\App\Common\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Resto2web\Core\Common\Controllers\Controller;
 
 class AdminAuthController extends Controller
 {
