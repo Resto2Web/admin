@@ -38,7 +38,15 @@ class PublishAdminAssets extends Command
      */
     public function handle()
     {
-        Artisan::call('vendor:publish --provider=Resto2web\Admin\AdminServiceProvider --tag=assets');
+        $this->info('Publishing the assets');
+        $this->call('vendor:publish',
+            [
+                '--provider'=>"Resto2web\Admin\AdminServiceProvider",
+                '--tag'=>"assets",
+                '--force'=>"true",
+                '-q'=>"",
+            ]
+        );
         return 0;
     }
 }
