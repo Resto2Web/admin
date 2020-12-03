@@ -43,8 +43,7 @@ class PublishAdminAssets extends Command
             [
                 '--provider'=>"Resto2web\Admin\AdminServiceProvider",
                 '--tag'=>"assets",
-                '--force'=>"true",
-                '-q'=>"",
+                '--force'=>"true"
             ]
         );
         return 0;

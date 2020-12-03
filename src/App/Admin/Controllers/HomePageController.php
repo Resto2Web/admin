@@ -10,7 +10,6 @@ class HomePageController extends Controller
 {
     public function __invoke()
     {
-        notify('TEts');
         return view('resto2web-admin::pages.home');
     }
 }

@@ -19,6 +19,7 @@
                     </a>
                 </li>
                 @includeIf('resto2web-admin::menu-links')
+                @include('resto2web-admin::links')
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

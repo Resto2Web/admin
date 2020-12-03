@@ -18,6 +18,7 @@
     "require": {
         "php": "^7.4",
         "illuminate/support": "^8.0",
+        "laravel/ui": "^3.1",
         "resto2web/core": "dev-develop",
         "yoeunes/notify": "^1.0"
     },

@@ -8,22 +8,21 @@
     {!! app('seotools')->generate() !!}
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
     <link rel="icon" href="/images/logos/favicon.png">
-    <link rel="stylesheet" href="{{ asset('/vendor/admin/css/admin.css') }}">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ mix('css/admin.css','/vendor/admin') }}">
+    @livewireStyles
 </head>
-
-<body class="" style="min-height: 100vh">
-<div class="justify-content-center d-flex w-100">
-    @include('cookieConsent::index')
-</div>
+<body class="bg-primary h-100" style="min-height: 100vh">
 @yield('content')
-<script src="{{asset('/vendor/admin/js/manifest.js')}}"></script>
-<script src="{{asset('/vendor/admin/js/vendor.js')}}"></script>
-<script src="{{asset('/vendor/admin/js/admin.js')}}"></script>
+
+<script src="{{ mix('js/manifest.js','/vendor/admin')}}"></script>
+<script src="{{ mix('js/vendor.js','/vendor/admin')}}"></script>
+<script src="{{ mix('js/admin.js','/vendor/admin')}}"></script>
 <script src="https://kit.fontawesome.com/5573a6d434.js" crossorigin="anonymous"></script>
 
-@yield('scripts')
+@livewireScripts
+@notify_render
+@stack('scripts')
+
 </body>
 </html>

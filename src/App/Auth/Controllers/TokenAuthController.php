@@ -15,7 +15,7 @@ class TokenAuthController extends Controller
 
     public function login($token)
     {
-        $secret = "my_secret";
+        $secret = config('resto2web.core.secret');
         $response = Http::withoutVerifying()->get("https://resto2web.test/ssoCheck/".$token."/".$secret);
         if ($response->successful()) {
             $user = User::where('email',$response->object()->email)->firstOrFail();

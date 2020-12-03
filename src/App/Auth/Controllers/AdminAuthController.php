@@ -4,7 +4,6 @@
 namespace Resto2web\Admin\App\Auth\Controllers;
 
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Resto2web\Core\Common\Controllers\Controller;
 
