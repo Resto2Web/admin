@@ -16,9 +16,15 @@ class TokenAuthController extends Controller
     public function login($token)
     {
         $secret = config('resto2web.core.secret');
+        if (is_null($secret) || $secret == '') {
+            abort(500, "Secret not configured");
+        }
         $response = Http::withoutVerifying()->get("https://resto2web.test/ssoCheck/".$token."/".$secret);
         if ($response->successful()) {
             $user = User::where('email',$response->object()->email)->firstOrFail();
+            if ($user->type != 'admin') {
+                abort(403);
+            }
             if ($this->guard()->user()) {
                 return redirect()->route('admin.index');
             }

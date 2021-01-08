@@ -117,11 +117,11 @@
 {{--                    Paramètres de compte--}}
 {{--                </a>--}}
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="{{ route('logout') }}"
+                <a class="dropdown-item" href="{{ route('admin.logout') }}"
                    onclick="event.preventDefault(); $('#logout-form').submit();">
                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2"></i> Déconnexion
                 </a>
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                <form id="logout-form" action="{{ route('admin.logout') }}" method="POST" style="display: none;">
                     @csrf
                 </form>
             </div>

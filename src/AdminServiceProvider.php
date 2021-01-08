@@ -5,6 +5,7 @@ namespace Resto2web\Admin;
 use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
 use Resto2web\Admin\App\Admin\Middleware\AdminMiddleware;
+use Resto2web\Admin\App\Admin\Middleware\AdminSeoMiddleware;
 use Resto2web\Admin\Console\Commands\PublishAdminAssets;
 use Yoeunes\Notify\NotifyServiceProvider;
 
@@ -17,6 +18,7 @@ class AdminServiceProvider extends ServiceProvider
     {
         $router = $this->app->make(Router::class);
         $router->aliasMiddleware('admin', AdminMiddleware::class);
+        $router->aliasMiddleware('admin-seo', AdminSeoMiddleware::class);
         /*
          * Optional methods to load your package assets
          */
