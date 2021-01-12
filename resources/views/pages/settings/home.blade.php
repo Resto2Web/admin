@@ -40,6 +40,18 @@
                             </div>
                         </div>
                     </a>
+                    <a class="list-group-item list-group-item-action" href="{{ route('admin.qrcode') }}" role="button" >
+                        <div class="d-flex align-items-center">
+                            <div class="pr-3">
+                                <h5>
+                                    <i class="text-muted fa fa-qrcode fa-fw"></i>
+                                </h5>
+                            </div>
+                            <div class="">
+                                <h5>QR Code pour l'application</h5>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>

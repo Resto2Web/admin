@@ -17,10 +17,13 @@
     ],
     "require": {
         "php": "^7.4",
+        "endroid/qr-code": "^3.9",
         "illuminate/support": "^8.0",
+        "laravel/sanctum": "^2.8",
         "laravel/ui": "^3.1",
         "resto2web/core": "dev-develop",
-        "yoeunes/notify": "^1.0"
+        "yoeunes/notify": "^1.0",
+        "ext-json": "*"
     },
     "require-dev": {
         "orchestra/canvas": "^6.0",
